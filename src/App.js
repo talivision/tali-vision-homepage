@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TopBar from "./resources/pages/TopBar";
+
+import { createMuiTheme } from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { ThemeProvider } from "@material-ui/core/styles"
+import { CssBaseline } from "@material-ui/core";
+import ContentProjects from "./resources/pages/ContentProject";
+import ContentAbout from "./resources/pages/ContentAbout";
+import ContentContact from "./resources/pages/ContentContact"
+import { Paper } from "@material-ui/core";
+
+
+const theme = createMuiTheme();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+          <Router>
+              <ThemeProvider theme={theme}>
+                  <CssBaseline />
+                  <div className="App" color="primary">
+                      <TopBar/>
+                          <Switch>
+                              <div className='routes'>
+                                  <Route exact path='/' component={ContentAbout}/>
+                                  <Route path='/projects' component={ContentProjects}/>
+                                  <Route path='/contact' component={ContentContact}/>
+                              </div>
+                          </Switch>
+                  </div>
+              </ThemeProvider>
+          </Router>
   );
 }
 
