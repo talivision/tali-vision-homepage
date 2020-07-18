@@ -28,6 +28,9 @@
   height: 64px;
 }
 
+body{
+  overflow-y: scroll;
+}
 
 .App-link {
   color: #61dafb;
