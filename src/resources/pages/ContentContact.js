@@ -26,6 +26,7 @@ export default function Content() {
               <a href="https://github.com/talidemestre">here</a>.
             </li>
           </ul>
+          Or use a carrier pigeon?
         </p>
       </div>
     </div>
