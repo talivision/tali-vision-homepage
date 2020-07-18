@@ -3,8 +3,6 @@ import './App.css';
 import TopBar from "./resources/pages/TopBar";
 
 import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { ThemeProvider } from "@material-ui/core/styles"
 import { CssBaseline } from "@material-ui/core";
@@ -13,8 +11,17 @@ import ContentAbout from "./resources/pages/ContentAbout";
 import ContentContact from "./resources/pages/ContentContact"
 import { Paper } from "@material-ui/core";
 
+import {deepOrange, green} from '@material-ui/core/colors';
 
-const theme = createMuiTheme();
+const theme = createMuiTheme({ palette: {
+    primary: {
+      main: deepOrange[500],
+    },
+    secondary: {
+      main: green[500],
+    },
+  },
+});
 
 function App() {
   return (
