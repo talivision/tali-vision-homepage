@@ -8,12 +8,11 @@ import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import useTheme from "@material-ui/core/styles/useTheme";
 import { Link } from "react-router-dom";
-let TopBar = (props) => {
+let TopBar = () => {
   let theme = useTheme();
-  console.log(props.bodyContent);
   return (
-    <div>
-      <AppBar color={"primary"} position={"sticky"}>
+    <div className="header">
+      <AppBar color={"primary"} style={{"top": "0px", "left" : "0px", "height": "64px"}}>
         <Toolbar>
           <div style={{ marginLeft: "auto", marginRight: "auto" }}>
             <Link to={"/"}>
@@ -40,7 +39,6 @@ let TopBar = (props) => {
           </div>
         </Toolbar>
       </AppBar>
-      <div>{props.currentMenu}</div>
     </div>
   );
 };
