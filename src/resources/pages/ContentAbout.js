@@ -20,7 +20,7 @@ export default function ContentAbout() {
         <img src={meImage} style={{"width": "100%"}} alt="picture of me with long hair vibing near a lake"></img>
         <h1>What?</h1>
         <p>
-          I'm a human-looking alien who currently lives in Canberra, Australia.
+          I'm a regular person who currently lives in Canberra, Australia.
           Very occasionally I will make things and put them on the internet.
           Among my endeavours are:
           <ul>
